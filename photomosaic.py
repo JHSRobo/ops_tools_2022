@@ -9,7 +9,7 @@ vid_capture = cv2.VideoCapture("192.168.1.111")
 
 while (vid_capture.isOpened()):
     ret, frame = vid_capture.read()
-cv2.imshow('image', frame)
+    cv2.imshow('image', frame)
 
     k = cv2.waitKey(1)
     if tile <= 8:
