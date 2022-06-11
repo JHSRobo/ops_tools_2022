@@ -6,5 +6,3 @@ b = float(input("B Value: "))
 biomass = "{:.2f}".format(num * a * length ** b)
 
 print("Biomass(kg): ", biomass)
-while True:
-  pass
