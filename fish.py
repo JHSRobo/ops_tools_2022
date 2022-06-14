@@ -28,7 +28,7 @@ while True:
     for click in clicks:
        img = cv2.circle(img,(click[0],click[1]),10,(255,0,0),-1)
     if len(clicks) == 4:
-        reference = abs(clicks[0][0] - clicks[1][0])
+        reference = ((abs(clicks[0][0] - clicks[1][0]) ** 2) + (abs(clicks[0][1] - clicks[1][1]) ** 2)) ** 0.5
         ratio = 20. / reference
         total = ((((abs(clicks[2][0] - clicks[3][0]) ** 2) + (abs(clicks[2][1] - clicks[3][1])) ** 2)) ** 0.5) * ratio
         displayImg = np.zeros((512,1024,3), dtype=np.uint8)
