@@ -16,6 +16,8 @@ while (vid_capture.isOpened()):
         if k == ord('p'):
             cv2.imwrite('Images/photomosaicImage{}.png'.format(tile), frame)
             tile = tile + 1
+        if k == ord('r'):
+            tile = tile - 1
 
     if tile > 8:
         # Top layer
